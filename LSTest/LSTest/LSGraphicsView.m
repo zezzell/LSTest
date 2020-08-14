@@ -20,6 +20,8 @@ typedef struct{
     id<MTLRenderPipelineState> _pipelineState;
     
     Renderable testRenderable;
+    
+    float _aspect;
 }
 
 -(id) initWithFrame:(NSRect)frameRect{
@@ -50,16 +52,31 @@ typedef struct{
         //handle error... pop up window?
     }
     
-    int vCount = 1;
+    int vCount = 5;
     // Make vertex buffer
-    AAPLColoredVertex v[] = {{{0.0,0.0,0.0}, {0.0,1.0,0.0}}};
+    
+    float halfBox = 0.25;
+    AAPLColoredVertex v[] = {{{-halfBox,-halfBox,0.0}, {1.0,0.0,0.0}},
+        {{-halfBox,halfBox,0.0}, {0.0,1.0,0.0}},
+        {{halfBox,halfBox,0.0}, {0.0,1.0,0.0}},
+        {{halfBox,-halfBox,0.0}, {1.0,1.0,1.0}},
+    {{-halfBox,-halfBox,0.0}, {1.0,1.0,1.0}}};
     testRenderable.vBuffer = [self.device newBufferWithLength:sizeof(AAPLColoredVertex) * vCount options:MTLResourceStorageModeShared];
     memcpy(testRenderable.vBuffer.contents, v, vCount* sizeof(AAPLColoredVertex));
-    testRenderable.vCount = 1;
+    testRenderable.vCount = vCount;
+  
     
     return self;
 }
 
+-(matrix_float4x4) computeViewMatrix{
+    return  (matrix_float4x4){{
+        {1.0f,0.0f,0.0f,0.0f},
+        {0.0f,_aspect,0.0f,0.0f},
+        {0.0f,0.0f,1.0f,0.0f},
+        {0.0f,0.0f,0.0f,1.0f}
+    }};
+}
 
 
 - (void)drawInMTKView:(nonnull MTKView *)view {
@@ -76,15 +93,23 @@ typedef struct{
     }
     
     [renderEncoder setRenderPipelineState:_pipelineState];
+    
+    Uniforms uniforms;
+    uniforms.viewMatrix = [self computeViewMatrix];
+    [renderEncoder setVertexBytes:&uniforms length:sizeof(uniforms) atIndex:AAPLVertexInputIndexUniform];
+    
     [renderEncoder setVertexBuffer:testRenderable.vBuffer offset:0 atIndex:AAPLVertexInputIndexVertices];
-    [renderEncoder drawPrimitives:MTLPrimitiveTypePoint vertexStart:0 vertexCount:testRenderable.vCount];
+    [renderEncoder drawPrimitives:MTLPrimitiveTypeLineStrip vertexStart:0 vertexCount:testRenderable.vCount];
     
     [renderEncoder endEncoding];
     [commandBuffer presentDrawable:self.currentDrawable];
     [commandBuffer commit];
 }
 
+
 - (void)mtkView:(nonnull MTKView *)view drawableSizeWillChange:(CGSize)size {
+    
+    _aspect = size.width / size.height;
     // if we ever need a depth texture, we would recreate it here
 }
 

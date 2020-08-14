@@ -13,10 +13,12 @@ typedef struct{
 
 vertex VertexOut
 vertexShaderBasic(uint vertexID [[vertex_id]],
-              constant AAPLColoredVertex *vertices [[buffer(AAPLVertexInputIndexVertices)]]){
+              constant AAPLColoredVertex *vertices [[buffer(AAPLVertexInputIndexVertices)]],
+              constant Uniforms &uniforms [[buffer(AAPLVertexInputIndexUniform)]]){
+    
     VertexOut out;
     out.pointsize = 20;
-    out.position = float4(vertices[vertexID].position,1.0);
+    out.position = uniforms.viewMatrix * float4(vertices[vertexID].position,1.0);
     out.color = vertices[vertexID].color;
     
     return out;

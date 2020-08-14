@@ -4,8 +4,13 @@
 
 #include <simd/simd.h>
 
+typedef struct{
+    matrix_float4x4 viewMatrix;
+} Uniforms;
+
 enum AAPLVertexInputIndex{
-    AAPLVertexInputIndexVertices = 0
+    AAPLVertexInputIndexVertices = 0,
+    AAPLVertexInputIndexUniform
 };
 
 typedef struct{
