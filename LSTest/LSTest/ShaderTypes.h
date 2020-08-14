@@ -15,7 +15,7 @@ enum AAPLVertexInputIndex{
 
 typedef struct{
     vector_float3 position;
-    vector_float3 color;
+    vector_float2 uv;
 }AAPLColoredVertex;
 
 #endif
