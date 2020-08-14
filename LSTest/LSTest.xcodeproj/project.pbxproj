@@ -15,6 +15,7 @@
 		EC1DB01424E6F7B000363421 /* shading.png in Resources */ = {isa = PBXBuildFile; fileRef = EC1DB01324E6F7B000363421 /* shading.png */; };
 		EC1DB01624E6F7D400363421 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1DB01524E6F7D400363421 /* MainView.swift */; };
 		EC1DB01924E6FA4E00363421 /* LSGraphicsView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1DB01824E6FA4E00363421 /* LSGraphicsView.m */; };
+		EC475A4724E7310C00B6C411 /* poster.png in Resources */ = {isa = PBXBuildFile; fileRef = EC475A4624E7310C00B6C411 /* poster.png */; };
 		EC810F2A24E701DC00BFD6BC /* MetalSource.metal in Sources */ = {isa = PBXBuildFile; fileRef = EC810F2924E701DC00BFD6BC /* MetalSource.metal */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +33,7 @@
 		EC1DB01724E6FA4E00363421 /* LSTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LSTest-Bridging-Header.h"; sourceTree = "<group>"; };
 		EC1DB01824E6FA4E00363421 /* LSGraphicsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSGraphicsView.m; sourceTree = "<group>"; };
 		EC1DB01A24E6FA7200363421 /* LSGraphicsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSGraphicsView.h; sourceTree = "<group>"; };
+		EC475A4624E7310C00B6C411 /* poster.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = poster.png; sourceTree = "<group>"; };
 		EC810F2924E701DC00BFD6BC /* MetalSource.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MetalSource.metal; sourceTree = "<group>"; };
 		EC810F2B24E701F100BFD6BC /* ShaderTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShaderTypes.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -69,6 +71,7 @@
 				EC810F2B24E701F100BFD6BC /* ShaderTypes.h */,
 				EC810F2924E701DC00BFD6BC /* MetalSource.metal */,
 				EC1DB00F24E6F74A00363421 /* mask.png */,
+				EC475A4624E7310C00B6C411 /* poster.png */,
 				EC1DB01324E6F7B000363421 /* shading.png */,
 				EC1DB00124E6F70D00363421 /* AppDelegate.swift */,
 				EC1DB00324E6F71100363421 /* Assets.xcassets */,
@@ -142,6 +145,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC475A4724E7310C00B6C411 /* poster.png in Resources */,
 				EC1DB01224E6F78000363421 /* scene.tif in Resources */,
 				EC1DB00424E6F71100363421 /* Assets.xcassets in Resources */,
 				EC1DB01424E6F7B000363421 /* shading.png in Resources */,
@@ -300,6 +304,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = LSTest/LSTest.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = V722L29WH9;
@@ -324,6 +329,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = LSTest/LSTest.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = V722L29WH9;
