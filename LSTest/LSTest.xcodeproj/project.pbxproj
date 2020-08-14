@@ -14,6 +14,7 @@
 		EC1DB01224E6F78000363421 /* scene.tif in Resources */ = {isa = PBXBuildFile; fileRef = EC1DB01124E6F78000363421 /* scene.tif */; };
 		EC1DB01424E6F7B000363421 /* shading.png in Resources */ = {isa = PBXBuildFile; fileRef = EC1DB01324E6F7B000363421 /* shading.png */; };
 		EC1DB01624E6F7D400363421 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1DB01524E6F7D400363421 /* MainView.swift */; };
+		EC1DB01924E6FA4E00363421 /* LSGraphicsView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1DB01824E6FA4E00363421 /* LSGraphicsView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,9 @@
 		EC1DB01124E6F78000363421 /* scene.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = scene.tif; sourceTree = "<group>"; };
 		EC1DB01324E6F7B000363421 /* shading.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shading.png; sourceTree = "<group>"; };
 		EC1DB01524E6F7D400363421 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		EC1DB01724E6FA4E00363421 /* LSTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LSTest-Bridging-Header.h"; sourceTree = "<group>"; };
+		EC1DB01824E6FA4E00363421 /* LSGraphicsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSGraphicsView.m; sourceTree = "<group>"; };
+		EC1DB01A24E6FA7200363421 /* LSGraphicsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSGraphicsView.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,10 +68,13 @@
 				EC1DB00124E6F70D00363421 /* AppDelegate.swift */,
 				EC1DB00324E6F71100363421 /* Assets.xcassets */,
 				EC1DB00524E6F71100363421 /* MainMenu.xib */,
+				EC1DB01824E6FA4E00363421 /* LSGraphicsView.m */,
 				EC1DB00824E6F71100363421 /* Info.plist */,
 				EC1DB01124E6F78000363421 /* scene.tif */,
 				EC1DB00924E6F71100363421 /* LSTest.entitlements */,
 				EC1DB01524E6F7D400363421 /* MainView.swift */,
+				EC1DB01724E6FA4E00363421 /* LSTest-Bridging-Header.h */,
+				EC1DB01A24E6FA7200363421 /* LSGraphicsView.h */,
 			);
 			path = LSTest;
 			sourceTree = "<group>";
@@ -103,6 +110,7 @@
 				TargetAttributes = {
 					EC1DAFFD24E6F70D00363421 = {
 						CreatedOnToolsVersion = 12.0;
+						LastSwiftMigration = 1200;
 					};
 				};
 			};
@@ -146,6 +154,7 @@
 			files = (
 				EC1DB00224E6F70D00363421 /* AppDelegate.swift in Sources */,
 				EC1DB01624E6F7D400363421 /* MainView.swift in Sources */,
+				EC1DB01924E6FA4E00363421 /* LSGraphicsView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +292,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = LSTest/LSTest.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -295,6 +305,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Corr.LSTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LSTest/LSTest-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -304,6 +316,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = LSTest/LSTest.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -316,6 +329,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Corr.LSTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LSTest/LSTest-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
