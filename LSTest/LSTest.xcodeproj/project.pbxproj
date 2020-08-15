@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC1D5B2E24E7577A002694CC /* poster_2_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = EC1D5B2D24E75779002694CC /* poster_2_normal.png */; };
 		EC1DB00224E6F70D00363421 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1DB00124E6F70D00363421 /* AppDelegate.swift */; };
 		EC1DB00424E6F71100363421 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC1DB00324E6F71100363421 /* Assets.xcassets */; };
 		EC1DB00724E6F71100363421 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC1DB00524E6F71100363421 /* MainMenu.xib */; };
@@ -16,10 +17,14 @@
 		EC1DB01624E6F7D400363421 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1DB01524E6F7D400363421 /* MainView.swift */; };
 		EC1DB01924E6FA4E00363421 /* LSGraphicsView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1DB01824E6FA4E00363421 /* LSGraphicsView.m */; };
 		EC475A4724E7310C00B6C411 /* poster.png in Resources */ = {isa = PBXBuildFile; fileRef = EC475A4624E7310C00B6C411 /* poster.png */; };
+		EC475A4924E73A6600B6C411 /* poster_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = EC475A4824E73A6600B6C411 /* poster_normal.png */; };
+		EC475A4B24E740F200B6C411 /* poster_2.png in Resources */ = {isa = PBXBuildFile; fileRef = EC475A4A24E740F200B6C411 /* poster_2.png */; };
+		EC475A4D24E7470100B6C411 /* plane.obj in Resources */ = {isa = PBXBuildFile; fileRef = EC475A4C24E7470100B6C411 /* plane.obj */; };
 		EC810F2A24E701DC00BFD6BC /* MetalSource.metal in Sources */ = {isa = PBXBuildFile; fileRef = EC810F2924E701DC00BFD6BC /* MetalSource.metal */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EC1D5B2D24E75779002694CC /* poster_2_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = poster_2_normal.png; sourceTree = "<group>"; };
 		EC1DAFFE24E6F70D00363421 /* LSTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LSTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC1DB00124E6F70D00363421 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC1DB00324E6F71100363421 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -34,6 +39,9 @@
 		EC1DB01824E6FA4E00363421 /* LSGraphicsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSGraphicsView.m; sourceTree = "<group>"; };
 		EC1DB01A24E6FA7200363421 /* LSGraphicsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSGraphicsView.h; sourceTree = "<group>"; };
 		EC475A4624E7310C00B6C411 /* poster.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = poster.png; sourceTree = "<group>"; };
+		EC475A4824E73A6600B6C411 /* poster_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = poster_normal.png; sourceTree = "<group>"; };
+		EC475A4A24E740F200B6C411 /* poster_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = poster_2.png; sourceTree = "<group>"; };
+		EC475A4C24E7470100B6C411 /* plane.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = plane.obj; sourceTree = "<group>"; };
 		EC810F2924E701DC00BFD6BC /* MetalSource.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MetalSource.metal; sourceTree = "<group>"; };
 		EC810F2B24E701F100BFD6BC /* ShaderTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShaderTypes.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,6 +76,10 @@
 		EC1DB00024E6F70D00363421 /* LSTest */ = {
 			isa = PBXGroup;
 			children = (
+				EC1D5B2D24E75779002694CC /* poster_2_normal.png */,
+				EC475A4C24E7470100B6C411 /* plane.obj */,
+				EC475A4A24E740F200B6C411 /* poster_2.png */,
+				EC475A4824E73A6600B6C411 /* poster_normal.png */,
 				EC810F2B24E701F100BFD6BC /* ShaderTypes.h */,
 				EC810F2924E701DC00BFD6BC /* MetalSource.metal */,
 				EC1DB00F24E6F74A00363421 /* mask.png */,
@@ -148,7 +160,11 @@
 				EC475A4724E7310C00B6C411 /* poster.png in Resources */,
 				EC1DB01224E6F78000363421 /* scene.tif in Resources */,
 				EC1DB00424E6F71100363421 /* Assets.xcassets in Resources */,
+				EC475A4924E73A6600B6C411 /* poster_normal.png in Resources */,
 				EC1DB01424E6F7B000363421 /* shading.png in Resources */,
+				EC475A4D24E7470100B6C411 /* plane.obj in Resources */,
+				EC1D5B2E24E7577A002694CC /* poster_2_normal.png in Resources */,
+				EC475A4B24E740F200B6C411 /* poster_2.png in Resources */,
 				EC1DB00724E6F71100363421 /* MainMenu.xib in Resources */,
 				EC1DB01024E6F74A00363421 /* mask.png in Resources */,
 			);
