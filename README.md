@@ -14,5 +14,6 @@ I definitely had some ideas to expand this little viewer but I ran out of time.
 
 Please reach out if you have any questions.  Thanks!
 
+-Zach
 
-Zach
+P.S. I am living on the edge with the Big Sur Beta and the Beta version of XCode.  Hopefully that doesn't cause issues if you actually try to load this project.  If you do have issues, please let me know and I can help debug.
